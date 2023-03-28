@@ -1,0 +1,123 @@
+<div class="card" style="width: 45%; margin-left: 400px; margin-top: 20px;">
+    <div class="card-header text-center"> ADD PRODUCT</div>
+    <div class="card-body">
+        <form [formGroup]="addProduct">
+            <div class="row">
+                <div class="mb-3 w-50">
+                    <label for="fn" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="fn" placeholder="title" name="title"
+                        formControlName="title">
+                    <small class="text-danger"
+                        *ngIf="addProduct.controls.title.touched && addProduct.controls.title.errors?.required field ">required
+                        field*</small>
+
+                </div>
+                <div class="col">
+                    <label for="ln">Category</label>
+                    <select class="form-select" aria-label="Default select example" placeholder="Category"
+                        name="category" formControlName="category">
+                        <option></option>
+                        <option value="smartphones">smartphones</option>
+                        <option value="laptops">laptops</option>
+                        <option value="fragrances">fragrances</option>
+                        <option value="skincare">skincare</option>
+                        <option value="groceries">groceries</option>
+                    </select>
+                </div>
+
+
+                <div class="mb-3 w-50">
+                    <label for="fn" class="form-label">Price</label>
+                    <input type="number" class="form-control" id="pr" placeholder="price" name="price"
+                        formControlName="price">
+                    <small class="text-danger"
+                        *ngIf="addProduct.controls.price.touched && addProduct.controls.price.errors?.required field ">required
+                        field*</small>
+
+                </div>
+                <div class="mb-3 w-50">
+                    <label for="fn" class="form-label">Rating</label>
+                    <input type="number" class="form-control" id="rt" placeholder="rating" name="rating"
+                        formControlName="rating">
+                    <small class="text-danger"
+                        *ngIf="addProduct.controls.rating.touched && addProduct.controls.rating.errors?.required field ">required
+                        field*</small>
+                </div>
+                <div class="mb-3 w-50">
+                    <label for="fn" class="form-label">Description</label>
+                    <input type="text" class="form-control" id="dp" placeholder="description" name="description"
+                        formControlName="description">
+                    <small class="text-danger"
+                        *ngIf="addProduct.controls.description.touched && addProduct.controls.description.errors?.required field ">required
+                        field*</small>
+                </div>
+                <div class="mb-3 w-50">
+                    <label for="fn" class="form-label">Add images</label>
+                    <input type="text" class="form-control" id="im" placeholder="img" name="imageurl"
+                        formControlName="imageUrl">
+
+
+                    <!-- <small class="text-danger" *ngIf="images && images.length===0">required
+                        field*</small> -->
+                </div>
+                <div>
+                    <img src="{{addProduct.value.imageUrl}}" alt="" width="20%">
+
+                </div>
+                <!-- <div class="mb-3 w-10">
+                    <button class="btn btn-primary" (click)="addImage()">Add Image</button>
+                </div> -->
+                <div class="row">
+                    <div class="mb-3 w-50">
+                        <ul>
+                            <li *ngFor="let item of images">{{item}} <i class="text-danger">X</i></li>
+                        </ul>
+                    </div>
+                    <div class="mb-3 w-50 d-flex">
+                        <div class=" w-50" *ngFor="let imgUrl of images" style="margin:2px">
+                            <img [src]="imgUrl" alt="_img" style="width: 100%; border-radius: 2px;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="card-footer d-flex justify-content-center "><button class="btn btn-primary w-40" (click)="submit()"
+            style="margin-right: 20px;">Add Product</button>
+        <button class="btn btn-warning w-40" routerLink="/login">Cancel</button>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="card">
+    <h2 class="card-header">Add products</h2>
+    <form class="d-flex" >
+      <div class="card-body">
+        <label for="FormControlInput" class="form-label">Title:</label>
+        <input type="text" class="form-control" placeholder="title" formControlName="title">
+        <label  class="form-label">Category:</label>
+        <input type="text" class="form-control" placeholder="category" formControlName="text">
+        </div>
+    </form>
+  </div> -->

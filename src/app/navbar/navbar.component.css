@@ -1,0 +1,29 @@
+.nav-Link {
+    display: block;
+    background-color: rgb(184, 186, 197);
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.nav-Link:hover {
+    background-color: lightgreen;
+    color: white;
+}
+
+.active {
+    background-color: rgb(167, 224, 224)a;
+    color: rgb(96, 108, 138);
+}
+
+
+.space {
+    flex: 1 1 auto;
+}
+
+.search {
+    margin-top: 4px;
+    padding: 2px;
+    background-color: blue;
+}

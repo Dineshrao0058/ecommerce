@@ -1,0 +1,21 @@
+<div class="card">
+  <h2 class="card-header">LOGIN</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="submit(loginForm.value)">
+    <div class="card-body">
+      <label for="FormControlInput" class="form-label">Username:</label>
+      <input type="email" class="form-control" id="FormControlInput0" placeholder="username" formControlName="username">
+      <label for="FormControlInput1" class="form-label">Password:</label>
+      <input type="password" class="form-control" id="FormControlInput1" placeholder="password"
+        formControlName="password">
+
+      <label class="form-check-label">Already a user?</label><br>
+      <div class="card-footer d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary" style="min-width:200px; margin-right: 20px;">LOGIN</button>
+
+
+        <button class="btn btn-primary w-60" routerLink="t-signup" style="min-width:250px">SIGN UP</button>
+
+      </div>
+    </div>
+  </form>
+</div>

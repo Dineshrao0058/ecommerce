@@ -1,0 +1,45 @@
+<!-- <div class="d-flex justify-content-between flex-wrapflex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+    <div class="btn-toolbar mb-2 mb-md-o">
+        <div class="btn-group me-2">
+            <button type="button" *ngFor="let b of categories" class="btn btn-sm btn-outline-secondary"
+                [class.category]="b.activeClass" style="width:100px;" (click)="onCategory(b)">{{b.name}}</button>
+
+        </div>
+    </div>
+</div> -->
+<!-- <div>
+    <button class="btn btn-primary" (click)="addProduct()">Add Product</button>
+
+
+     <button class="btn btn-secondary" routerLink="admin"> View Products</button> -->
+
+
+<div class="table-responsive">
+    <table class="table table-striped table-sm">
+        <thead class="table-light">
+
+            <tr>
+                <th> product Id</th>
+                <th> product Title</th>
+                <th> product Description</th>
+                <th> product Price</th>
+                <th><i class="bi bi-eye-fill"></i> view </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let p of allProducts">
+                <td>{{p.id}}</td>
+                <td>{{p.title}}</td>
+                <td>{{p.description}}</td>
+                <td>{{p.price}}</td>
+                <td><button type="button" class="btn btn-info" [routerLink]="['products-details',p['id']]">view</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>

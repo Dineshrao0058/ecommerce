@@ -1,0 +1,21 @@
+.card{
+    width: 600px;
+    margin-left: 300px;
+    margin-top: 100px;
+    background-color: azure;
+    
+}
+h2{
+    text-align: center;
+    color: rgb(97, 122, 122);
+}
+label{
+    font-weight: bold;
+    padding: 10px;
+}
+button{
+ text-align: center;
+}
+.card{
+    color:rgb(209, 181, 207);
+}

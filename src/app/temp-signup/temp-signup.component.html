@@ -1,0 +1,159 @@
+
+<div class="card">
+  <div class="container">
+    <h2 class="card-header">Sign Up form</h2>
+    <form class="Superform-Group" [formGroup]="superForm" (ngSubmit)="signup()">
+      <div class="row w-100">
+        <div class="mb-3">
+          <label class="form-label">First Name:</label>
+          <input type="text" class="form-control" placeholder="First Name" formControlName="fname">
+          <div class="text-danger" *ngIf="(c.fname.touched|| c.fname.dirty) && c.fname.errors">
+            <small *ngIf="c.fname.errors.required minlength(3)">First Name required</small>
+            <small *ngIf="c.fname.errors.required alphabets">Albhabets</small>
+            <small *ngIf="c.fname.errors.required pattern">pattern required</small>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Last Name:</label>
+          <input type="text" class="form-control" placeholder="Last Name" formControlName="lname">
+          <div class="text-danger" *ngIf="(c.lname.touched|| c.lname.dirty) && c.lname.errors">
+            <small *ngIf="c.lname.errors.required">Last Name required</small>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Mobile No:</label>
+          <input type="text" class="form-control" placeholder="Mobile Number" formControlName="mobile">
+          <div class="text-danger" *ngIf="(c.mobile.touched|| c.mobile.dirty) && c.mobile.errors">
+            <small *ngIf="c.mobile.errors.required">required*</small>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email:</label>
+          <input type="text" class="form-control" placeholder="Email Address" formControlName="email">
+          <div class="text-danger" *ngIf="(c.email.touched|| c.email.dirty) && c.email.errors">
+            <small *ngIf="c.email.errors.required">required</small>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Password:</label>
+          <input type="password" class="form-control" placeholder="Password" formControlName="pwd">
+          <div class="text-danger" *ngIf="(c.pwd.touched|| c.pwd.dirty) && c.pwd.errors">
+            <small *ngIf="c.pwd.errors.required">required</small>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">confirm-password:</label>
+          <input type="password" class="form-control" placeholder="Confirm Password" formControlName="cpwd">
+          <div class="text-danger" *ngIf="(c.cpwd.touched|| c.cpwd.dirty) && c.cpwd.errors">
+            <small *ngIf="c.cpwd.errors.required">required</small>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-sm-6">
+            <label for="Role"><b>Roletype:</b> </label><br>
+            <div class="form-check form-check-inline ms-2">
+              <input class="form-check-input" type="radio" name="role" value="option1" />
+              <label class="form-check-label" for="inlineRadio1">user</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="role" value="option2" />
+              <label class="form-check-label" for="inlineRadio2">admin</label>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <label for="gender"><b>Gender:</b> </label><br>
+            <div class="form-check form-check-inline ms-2">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" value="option1" />
+              <label class="form-check-label" for="inlineRadio1">Male</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" value="option2" />
+              <label class="form-check-label" for="inlineRadio2">Female</label>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Address 1:</label>
+                <input type="text" class="form-control" placeholder="Address 1" formControlName="address1">
+                <div class="text-danger" *ngIf="(c.address1.touched|| c.address1.dirty) && c.address1.errors">
+                  <small *ngIf="c.address1.errors.required">required*</small>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-sm-6">
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Adress 2:</label>
+                <input type="text" class="form-control" placeholder="Address 2" formControlName="address2">
+                <div class="text-danger" *ngIf="(c.address2.touched|| c.address2.dirty) && c.address2.errors">
+                  <small *ngIf="c.address2.errors.required">required*</small>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">City:</label>
+                <input type="text" class="form-control" placeholder="City" formControlName="city">
+                <div class="text-danger" *ngIf="(c.city.touched|| c.city.dirty) && c.city.errors">
+                  <small *ngIf="c.city.errors.required">required*</small>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-sm-6">
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">State:</label>
+                <input type="text" class="form-control" placeholder="State" formControlName="state">
+                <div class="text-danger" *ngIf="(c.state.touched|| c.state.dirty) && c.state.errors">
+                  <small *ngIf="c.state.errors.required">required*</small>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Country:</label>
+                <input type="text" class="form-control" placeholder="Country" formControlName="country">
+                <div class="text-danger" *ngIf="(c.country.touched|| c.country.dirty) && c.country.errors">
+                  <small *ngIf="c.country.errors.required">required*</small>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-sm-6">
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Pincode:</label>
+                <input type="text" class="form-control" placeholder="Pincode" formControlName="pincode">
+                <div class="text-danger" *ngIf="(c.pincode.touched|| c.pincode.dirty) && c.pincode.errors">
+                  <small *ngIf="c.pincode.errors.required">required*</small>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div>
+          <button class="btn btn-primary w-60" routerLink="./navbar" style="min-width:250px">SIGN UP</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div> 
