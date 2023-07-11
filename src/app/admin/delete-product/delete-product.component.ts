@@ -17,10 +17,7 @@ export class DeleteProductComponent implements OnInit {
     // console.log('delete id',this.productId);
   }
 
-
   deleteProduct() {
-
-
 
     this.ps.deleteProduct(this.productId).subscribe((res: any) => {
       console.log('deleted succesfully..')
